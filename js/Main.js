@@ -12,6 +12,7 @@ import IconHelp from 'material-ui/svg-icons/action/help';
 import IconMenu from 'material-ui/svg-icons/navigation/menu';
 import IconPlace from 'material-ui/svg-icons/maps/place';
 import IconStars from 'material-ui/svg-icons/action/stars';
+import IconTrain from 'material-ui/svg-icons/maps/train';
 
 import AppBar from 'material-ui/AppBar';
 import AutoComplete from 'material-ui/AutoComplete';
@@ -29,8 +30,9 @@ import Toggle from 'material-ui/Toggle';
 import * as Util from './Util';
 import {WaypointsDialog, WaypointsOverlay} from './Waypoints';
 import {ClaimsDrawerContent, EditableClaim} from './Claims';
+import {buildTransitData, mapAllStationsSorted, TransitLine, TransitStation} from './Transit';
 
-L.Icon.Default.imagePath = '//cdnjs.cloudflare.com/ajax/libs/leaflet/1.0.0-rc.3/images/';
+L.Icon.Default.imagePath = 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.0.0-rc.3/images/';
 
 var mcCRS = L.extend({}, L.CRS.Simple, {
   transformation: new L.Transformation(1, 0, 1, 0)
@@ -79,20 +81,28 @@ export default class Main extends Component {
       editedClaimId: -1,
       // map state
       showBorder: false,
-      showClaims: true,
+      showClaims: false, // XXX true,
+      showTransit: true,
       showWaypoints: true,
       showTerrain: true,
       // map data
       mapView: Util.hashToView(location.hash), // read only! TODO feedback loop onmoveend <-> setState
       cursorPos: L.latLng(0,0),
       claims: [],
+      transit: {
+        lines: [],
+        stations: {},
+      },
       waypoints: [],
     };
   }
 
   componentWillMount() {
     Util.getJSON(this.props.claimsUrl, claims => {
-      this.setState({claims: this.state.claims.concat(claims)});
+      this.setState({claims: claims});
+    });
+    Util.getJSON(this.props.transitUrl, transitJson => {
+      this.setState({transit: buildTransitData(transitJson)});
     });
   }
 
@@ -130,14 +140,19 @@ export default class Main extends Component {
           this.map.flyToBounds(bounds);
         }}
       />,
-    }}).concat(this.state.waypoints.map(w => { return {
+    }}).concat(Util.mapObj(this.state.transit.stations, s => { return {
+      text: s.name,
+      value: <MenuItem
+        leftIcon={<IconTrain />}
+        primaryText={s.name}
+        onTouchTap={() => this.map.flyTo([s.pos[2], s.pos[0]], 3)}
+      />,
+    }})).concat(this.state.waypoints.map(w => { return {
       text: w.name,
       value: <MenuItem
         leftIcon={<IconPlace />}
         primaryText={w.name}
-        onTouchTap={() => {
-          this.map.flyTo(Util.xz(w.x, w.z), 3);
-        }}
+        onTouchTap={() => this.map.flyTo(Util.xz(w.x, w.z), 3)}
       />,
     }}));
   }
@@ -155,7 +170,7 @@ export default class Main extends Component {
           >
             <div className='menu-inset'>
               <AutoComplete fullWidth openOnFocus
-                hintText="Find a claim, waypoint, ..."
+                hintText="Find a claim, station, waypoint"
                 filter={AutoComplete.fuzzyFilter}
                 dataSource={this.getSearchableData()}
               />
@@ -190,6 +205,11 @@ export default class Main extends Component {
                 label="Claims"
                 toggled={this.state.showClaims}
                 onToggle={() => this.setState({showClaims: !this.state.showClaims})}
+              />
+              <CustomToggle
+                label="Transit"
+                toggled={this.state.showTransit}
+                onToggle={() => this.setState({showTransit: !this.state.showTransit})}
               />
               <CustomToggle
                 label="Terrain"
@@ -294,6 +314,20 @@ export default class Main extends Component {
                       editedClaimId: claimId,
                     });
                   }}
+                />
+              )}
+
+              { this.state.showTransit && this.state.transit.lines.map((line, i) =>
+                <TransitLine
+                  key={i}
+                  line={line}
+                />
+              )}
+
+              { this.state.showTransit && mapAllStationsSorted(this.state.transit.stations, station =>
+                <TransitStation
+                  key={station.name}
+                  station={station}
                 />
               )}
 
