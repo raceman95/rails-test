@@ -1,0 +1,164 @@
+[
+    {
+        "name": "Ice",
+        "kind": "tunnel",
+        "color": "#ffffff",
+        "stops": [
+            {"pos": [-3900, 11, -4000], "name": "Polynesia"},
+            {"pos": [-3900, 11, 200], "name": "Agora"},
+            {"pos": [-3900, 11, 700]},
+            {"pos": [1600, 11, 700], "name": "Lothlorien"},
+            {"pos": [1600, 11, 2700]},
+            {"pos": [3800, 11, 2700]},
+            {"pos": [3800, 11, 2900], "name": "Persia"}
+        ]
+    },
+
+    {
+        "name": "North-South",
+        "kind": "planned",
+        "color": "#ff0000",
+        "stops": [
+            {"pos": [400, 0, -1600], "name": "Oskia"},
+            {"pos": [400, 0, -1200]},
+            {"pos": [119, 0, -919]},
+            {"pos": [0, 0, -919], "name": "Kazad Ankor"}
+        ]
+    },
+    {
+        "name": "North-South",
+        "kind": "tunnel",
+        "color": "#ff0000",
+        "stops": [
+            {"pos": [0, 0, -919], "name": "Kazad Ankor"},
+            {"pos": [0, 0, 0], "name": "Zer0"},
+            {"pos": [0, 0, 1700]},
+            {"pos": [-300, 0, 1700], "name": "Kaldarra"}
+        ]
+    },
+    {
+        "name": "East End",
+        "kind": "tunnel",
+        "color": "#ffff00",
+        "stops": [
+            {"pos": [3886, 8, 0], "name": "Bacchiatte"},
+            {"pos": [4671, 8, 0]},
+            {"pos": [4671, 8, -748], "name": "Rodos"},
+            {"pos": [4671, 8, -850], "name": "? East Island Castle"},
+            {"pos": [4671, 0, -1600], "name": "Arrakis"}
+        ]
+    },
+    {
+        "kind": "tunnel",
+        "color": "#0099ff",
+        "stops": [
+            {"pos": [4671, 8, -748], "name": "Rodos"},
+            {"pos": [4145, 8, -748]},
+            {"pos": [3970, 8, -919]},
+            {"pos": [3886, 8, -919], "name": "Aquila Market"},
+            {"pos": [3800, 8, -919]}
+        ]
+    },
+    {
+        "kind": "planned",
+        "color": "#0099ff",
+        "stops": [
+            {"pos": [4145, 8, -748]},
+            {"pos": [3886, 8, -748], "name": "Aquila Port"}
+        ]
+    },
+    {
+        "kind": "planned",
+        "color": "#0099ff",
+        "stops": [
+            {"pos": [3800, 8, -919]},
+            {"pos": [2100, 0, -919], "name": "Antilonia"},
+            {"pos": [0, 0, -919], "name": "Kazad Ankor"}
+        ]
+    },
+    {
+        "kind": "tunnel",
+        "color": "#ff8800",
+        "stops": [
+            {"pos": [666, 0, 2900], "name": "Hayek"},
+            {"pos": [3800, 0, 2900], "name": "Persia"}
+        ]
+    },
+
+
+
+    {
+        "name": "Eastern N-S",
+        "kind": "planned",
+        "color": "#ff00ff",
+        "stops": [
+            {"pos": [4150, 0, -1200], "name": "DevRail HQ"},
+            {"pos": [3886, 0, -1200]},
+            {"pos": [3886, 8, -919], "name": "Aquila Market"},
+            {"pos": [3886, 8, -748], "name": "Aquila Port"},
+            {"pos": [3886, 8, 0], "name": "Bacchiatte"},
+            {"pos": [3700, 0, 1200], "name": "Alpoko"},
+            {"pos": [3700, 0, 2300], "name": "? Persia Some Island"},
+            {"pos": [3700, 0, 2900]},
+            {"pos": [3800, 0, 2900], "name": "Persia"},
+            {"pos": [3800, 0, 3100]},
+            {"pos": [2400, 0, 3100], "name": "Mt. Augusta"},
+            {"pos": [1512, 0, 3100]},
+            {"pos": [1512, 100, 1891], "name": "Southpost"},
+            {"pos": [1512, 100, 1450]},
+            {"pos": [1438, 102, 1443], "name": "Watertown"},
+            {"pos": [1438, 0, 0]},
+            {"pos": [0, 0, 0], "name": "Zer0"}
+        ]
+    },
+
+
+
+    {"kind": "planned", "stops": [{"pos": [-3090, 0, 1115], "name": "Mt. Athos"}]},
+    {"kind": "planned", "stops": [{"pos": [-3600, 0, 600], "name": "Vogelburg"}]},
+    {"kind": "planned", "stops": [{"pos": [500, 0, 1100], "name": "Estra"}]},
+    {"kind": "planned", "stops": [{"pos": [-3100, 0, -2150], "name": "Balkania"}]},
+    {"kind": "planned", "stops": [{"pos": [-4300, 0, -4500], "name": "Katyusha"}]},
+    {"kind": "planned", "stops": [{"pos": [-3850, 0, -4600], "name": "/tg/ Town"}]},
+    {"kind": "planned", "stops": [{"pos": [-4750, 0, -3950], "name": "Chancer"}]},
+    {"kind": "planned", "stops": [{"pos": [-4900, 0, -3700], "name": "Marienburg"}]},
+    {"kind": "planned", "stops": [{"pos": [2450, 0, -2000], "name": "Greenville"}]},
+    {"kind": "planned", "stops": [{"pos": [2050, 0, -2400], "name": "Commercium"}]},
+    {"kind": "planned", "stops": [{"pos": [2000, 0, -2100], "name": "?2 Commercium"}]},
+    {"kind": "planned", "stops": [{"pos": [1800, 0, -2900], "name": "Qiyuan (Xinteng)"}]},
+    {"kind": "planned", "stops": [{"pos": [1450, 0, -3050], "name": "? Island (Xinteng)"}]},
+    {"kind": "planned", "stops": [{"pos": [2230, 0, -1650], "name": "Beneshire"}]},
+    {"kind": "planned", "stops": [{"pos": [3300, 0, -2250], "name": "Brushfire"}]},
+    {"kind": "planned", "stops": [{"pos": [2070, 0, -1280], "name": "Kenya"}]},
+    {"kind": "planned", "stops": [{"pos": [900, 0, -3900], "name": "Pending"}]},
+    {"kind": "planned", "stops": [{"pos": [1500, 0, -3500], "name": "Arbo"}]},
+    {"kind": "planned", "stops": [{"pos": [-3930, 11, -1980], "name": "Mumville"}]},
+    {"kind": "planned", "stops": [{"pos": [-1850, 0, -1100], "name": "Torngat"}]},
+    {"kind": "planned", "stops": [{"pos": [-2600, 0, 4600], "name": "Sork"}]},
+    {"kind": "planned", "stops": [{"pos": [-923, 0, 2046], "name": "Aeon"}]},
+    {"kind": "planned", "stops": [{"pos": [-3443, 0, 4562], "name": "Moo Moo Castle"}]},
+    {"kind": "planned", "stops": [{"pos": [-4950, 0, 3750], "name": "Quantum"}]},
+    {"kind": "planned", "stops": [{"pos": [3200, 0, 0], "name": "WaWa"}]},
+    {"kind": "planned", "stops": [{"pos": [4200, 0, 1750], "name": "Persia North Island"}]},
+    {"kind": "planned", "stops": [{"pos": [2500, 0, -300], "name": "To'khi"}]},
+    {"kind": "planned", "stops": [{"pos": [1000, 0, 500], "name": "Yoahtl"}]},
+    {"kind": "planned", "stops": [{"pos": [-3200, 0, 1900], "name": "Fort Grack Fields"}]},
+    {"kind": "planned", "stops": [{"pos": [2500, 0, -4200], "name": "USR"}]},
+    {"kind": "planned", "stops": [{"pos": [2550, 0, -4650], "name": "? 2 USR"}]},
+    {"kind": "planned", "stops": [{"pos": [3900, 0, -4050], "name": "? 3 USR"}]},
+    {"kind": "planned", "stops": [{"pos": [4650, 0, -4000], "name": "? 3 USR"}]},
+
+    {"kind": "planned", "stops": [{"pos": [-420, 0, -230], "name": "? Meneleus"}]},
+    {"kind": "planned", "stops": [{"pos": [-300, 0, 2400], "name": "? Kaldarra South"}]},
+    {"kind": "planned", "stops": [{"pos": [0, 0, 450], "name": "? Bhuldir"}]},
+    {"kind": "planned", "stops": [{"pos": [-1900, 0, -4500], "name": "? Aruman"}]},
+    {"kind": "planned", "stops": [{"pos": [-1200, 0, 2300], "name": "? SvyatoyVolkostrov"}]},
+    {"kind": "planned", "stops": [{"pos": [-2800, 0, -2050], "name": "? Balkania Farms"}]},
+    {"kind": "planned", "stops": [{"pos": [-2133, 0, 2833], "name": "? Clearwater"}]},
+    {"kind": "planned", "stops": [{"pos": [4100, 0, 1100], "name": "? Alpoko East"}]},
+    {"kind": "planned", "stops": [{"pos": [-4600, 0, 2500], "name": "? 1 Irithyll"}]},
+    {"kind": "planned", "stops": [{"pos": [-3750, 0, 2800], "name": "? 2 Irithyll"}]},
+    {"kind": "planned", "stops": [{"pos": [-4900, 0, 0], "name": "? 2 Irithyll"}]},
+    {"kind": "planned", "stops": [{"pos": [-1600, 0, -850], "name": "? 1 unclaimed"}]},
+    {"kind": "planned", "stops": [{"pos": [600, 0, -2250], "name": "? 3 unclaimed"}]}
+]
